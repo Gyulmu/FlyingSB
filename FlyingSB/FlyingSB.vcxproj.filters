@@ -24,9 +24,15 @@
     <ClCompile Include="GameBase.cpp">
       <Filter>GameBase</Filter>
     </ClCompile>
+    <ClCompile Include="GameWindow.cpp">
+      <Filter>GameBase</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameBase.h">
+      <Filter>GameBase</Filter>
+    </ClInclude>
+    <ClInclude Include="GameWindow.h">
       <Filter>GameBase</Filter>
     </ClInclude>
   </ItemGroup>
