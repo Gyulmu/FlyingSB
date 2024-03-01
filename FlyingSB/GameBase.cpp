@@ -18,6 +18,22 @@ void GameBase::Run()
 	while (s_loop)
 	{
 		GameWindow::Update();
-		Sleep(10);
+
+		// Update 함수를 삽입해주세요.
+		// ...
+
+		// Render
+		Render();
 	}
+}
+
+void GameBase::Render()
+{
+	GameWindow::BeginDraw();
+
+	// Render 함수를 삽입해주세요.
+	// ...
+	
+	// End Draw
+	GameWindow::EndDraw();
 }

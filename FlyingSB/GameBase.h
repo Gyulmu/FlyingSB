@@ -11,5 +11,8 @@ public:
 	static void Exit() { s_loop = false; }
 
 private:
+	static void Render();
+
+private:
 	static bool s_loop;
 };
