@@ -10,6 +10,8 @@ obj_test::obj_test()
 
 obj_test::~obj_test()
 {
+	if (m_bitmap)
+		m_bitmap->Release();
 }
 
 void obj_test::Initialize()
@@ -19,6 +21,9 @@ void obj_test::Initialize()
 	renderer->Color(D2D1::ColorF(D2D1::ColorF::Red));
 	AddRenderer(renderer);
 	renderer->Release();
+
+	// Get Bitmap
+	m_bitmap = GameUI::D2D1BitmapFromFileName(L"CMIRO00.png");
 }
 
 void obj_test::Update()
@@ -34,4 +39,12 @@ void obj_test::Update()
 
 	else if (GameUI::KeyUp(VK_DOWN))
 		Translate(D2D1::SizeF(0.f, 50.f));
+}
+
+void obj_test::Render()
+{
+	GameObject::Render();
+
+	if (m_bitmap)
+		GameUI::RenderTarget()->DrawBitmap(m_bitmap);
 }

@@ -11,4 +11,8 @@ private:
 	virtual ~obj_test() final;
 	virtual void Initialize() final;
 	virtual void Update() final;
+	virtual void Render() final;
+
+private:
+	ID2D1Bitmap* m_bitmap = nullptr;
 };

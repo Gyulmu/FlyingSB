@@ -158,6 +158,7 @@
     <ClCompile Include="GameBase.cpp" />
     <ClCompile Include="GameInput.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GameWIC.cpp" />
     <ClCompile Include="GameWindow.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="obj_test.cpp" />
@@ -172,6 +173,7 @@
     <ClInclude Include="GameInput.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameUI.h" />
+    <ClInclude Include="GameWIC.h" />
     <ClInclude Include="GameWindow.h" />
     <ClInclude Include="obj_test.h" />
     <ClInclude Include="RefCount.h" />

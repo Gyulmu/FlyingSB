@@ -60,6 +60,9 @@
     <ClCompile Include="GameInput.cpp">
       <Filter>GameBase</Filter>
     </ClCompile>
+    <ClCompile Include="GameWIC.cpp">
+      <Filter>GameBase</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameBase.h">
@@ -96,6 +99,9 @@
       <Filter>Renderer</Filter>
     </ClInclude>
     <ClInclude Include="GameInput.h">
+      <Filter>GameBase</Filter>
+    </ClInclude>
+    <ClInclude Include="GameWIC.h">
       <Filter>GameBase</Filter>
     </ClInclude>
   </ItemGroup>
