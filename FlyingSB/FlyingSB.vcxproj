@@ -158,11 +158,18 @@
     <ClCompile Include="GameBase.cpp" />
     <ClCompile Include="GameWindow.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="scene_init.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameBase.h" />
+    <ClInclude Include="GameUI.h" />
     <ClInclude Include="GameWindow.h" />
     <ClInclude Include="RefCount.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="scene_init.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

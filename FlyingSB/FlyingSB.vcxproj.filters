@@ -16,6 +16,9 @@
     <Filter Include="GameBase">
       <UniqueIdentifier>{8f6cd146-3138-4786-9d7d-cc823320e2e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{71a5831a-7ac2-48f5-8dae-15603e0ae2e3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -27,6 +30,15 @@
     <ClCompile Include="GameWindow.cpp">
       <Filter>GameBase</Filter>
     </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>GameBase</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>GameBase</Filter>
+    </ClCompile>
+    <ClCompile Include="scene_init.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameBase.h">
@@ -37,6 +49,18 @@
     </ClInclude>
     <ClInclude Include="RefCount.h">
       <Filter>GameBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>GameBase</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>GameBase</Filter>
+    </ClInclude>
+    <ClInclude Include="GameUI.h">
+      <Filter>GameBase</Filter>
+    </ClInclude>
+    <ClInclude Include="scene_init.h">
+      <Filter>Scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
