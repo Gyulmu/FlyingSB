@@ -22,6 +22,9 @@
     <Filter Include="GameObject">
       <UniqueIdentifier>{fd2d76ab-e86a-4610-95b8-76a29d224756}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{d552b7de-33d1-47f8-8763-c5ef419996dc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -47,6 +50,12 @@
     </ClCompile>
     <ClCompile Include="obj_test.cpp">
       <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>GameBase</Filter>
+    </ClCompile>
+    <ClCompile Include="renderer_test.cpp">
+      <Filter>Renderer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +85,12 @@
     </ClInclude>
     <ClInclude Include="obj_test.h">
       <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>GameBase</Filter>
+    </ClInclude>
+    <ClInclude Include="renderer_test.h">
+      <Filter>Renderer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -160,6 +160,8 @@
     <ClCompile Include="GameWindow.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="obj_test.cpp" />
+    <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="renderer_test.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="scene_init.cpp" />
@@ -171,6 +173,8 @@
     <ClInclude Include="GameWindow.h" />
     <ClInclude Include="obj_test.h" />
     <ClInclude Include="RefCount.h" />
+    <ClInclude Include="Renderer.h" />
+    <ClInclude Include="renderer_test.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="scene_init.h" />

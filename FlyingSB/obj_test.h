@@ -10,9 +10,4 @@ public:
 private:
 	virtual ~obj_test() final;
 	virtual void Initialize() final;
-	virtual void Render() final;
-
-private:
-	ID2D1RenderTarget* m_rendertarget = nullptr;
-	ID2D1SolidColorBrush* m_brush = nullptr;
 };
