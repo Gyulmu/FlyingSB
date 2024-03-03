@@ -12,4 +12,6 @@ namespace GameUI
 	bool KeyPress(int key);
 	bool KeyDown(int key);
 	bool KeyUp(int key);
+
+	float Duration();
 }

@@ -1,5 +1,6 @@
 #include "GameBase.h"	
 #include "GameInput.h"
+#include "GameTimer.h"
 #include "GameWIC.h"
 #include "GameWindow.h"
 #include "SceneManager.h"
@@ -11,12 +12,14 @@ void GameBase::Initialize(HINSTANCE instance)
 	GameWindow::Initialize(instance);
 	GameWIC::Initialize();
 	GameInput::Initialize();
+	GameTimer::Initialize();
 	SceneManager::Initialize();
 }
 
 void GameBase::Release()
 {
 	SceneManager::Release();
+	GameTimer::Release();
 	GameInput::Release();
 	GameWIC::Release();
 	GameWindow::Release();
@@ -30,6 +33,7 @@ void GameBase::Run()
 	{
 		GameWindow::Update();
 		GameInput::Update();
+		GameTimer::Update();
 		is_loaded = SceneManager::Update();
 
 		// Render

@@ -16,4 +16,6 @@ private:
 
 private:
 	renderer_bitmaps* m_renderer = nullptr;
+	float m_time = 0.f;
+	bool m_switch = false;
 };

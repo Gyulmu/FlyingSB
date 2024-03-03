@@ -66,6 +66,9 @@
     <ClCompile Include="renderer_bitmaps.cpp">
       <Filter>Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="GameTimer.cpp">
+      <Filter>GameBase</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameBase.h">
@@ -109,6 +112,9 @@
     </ClInclude>
     <ClInclude Include="renderer_bitmaps.h">
       <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="GameTimer.h">
+      <Filter>GameBase</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

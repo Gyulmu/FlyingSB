@@ -44,4 +44,13 @@ void obj_test::Update()
 		if (GameUI::KeyDown('1' + i))
 			m_renderer->Frame(i);
 	}
+
+	m_time += GameUI::Duration();
+
+	if (m_time > 1.f)
+	{
+		m_time -= 1.f;
+		m_switch = !m_switch;
+		m_renderer->Frame(6 * (int)m_switch);
+	}
 }
