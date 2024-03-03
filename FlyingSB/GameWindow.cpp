@@ -6,26 +6,41 @@ ID2D1HwndRenderTarget* GameWindow::s_rendertarget = nullptr;
 
 void GameWindow::Initialize(HINSTANCE instance)
 {
-    // 창(Window)을 생성합니다.
+    // Index
+    // A. 창(Window)을 생성합니다.
+    // B. D2D1 RenderTarget을 생성합니다.
+
+    // A. 창(Window)을 생성합니다.
+    //    A-1. 창(Window) 클래스를 등록합니다.
     RegisterWindowClass(instance);
 
+    //    A-2. 클라이언트 역영 사이즈 기준으로
+    //      창(Window)의 크기를 계산합니다.
+    RECT rect = { 0, 0, 800, 600 };
+    AdjustWindowRect(&rect, WS_CAPTION | WS_SYSMENU, FALSE);
+
+    //    A-3. 창(Window)을 생성합니다.
     s_wnd = CreateWindowExA(
         0,
         "GameWindow",
         "FlyingSB",
         WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_VISIBLE,
-        0, 0, 800, 600,
+        (GetSystemMetrics(SM_CXSCREEN) - (rect.right - rect.left)) / 2,
+        (GetSystemMetrics(SM_CYSCREEN) - (rect.bottom - rect.top)) / 2,
+        rect.right - rect.left, 
+        rect.bottom - rect.top,
         nullptr, nullptr, 
         instance, 
         nullptr);
 
-    // D2D1 Create Factory
+    // B. D2D1 RenderTarget을 생성합니다.
+    //    B-1. D2D1 Create Factory
     ID2D1Factory* factory = nullptr;
     D2D1CreateFactory(
         D2D1_FACTORY_TYPE_SINGLE_THREADED,
         &factory);
 
-    // D2D1 Create RenderTarget
+    //    B-2. D2D1 Create RenderTarget
     factory->CreateHwndRenderTarget(
         D2D1::RenderTargetProperties(),
         D2D1::HwndRenderTargetProperties(
