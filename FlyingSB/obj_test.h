@@ -10,4 +10,5 @@ public:
 private:
 	virtual ~obj_test() final;
 	virtual void Initialize() final;
+	virtual void Update() final;
 };

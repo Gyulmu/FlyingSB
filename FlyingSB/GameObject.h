@@ -18,6 +18,9 @@ public:
 	void Transform(const D2D1_POINT_2F& point);
 	void Transform(const D2D1_MATRIX_3X2_F& transform);
 	const D2D1_MATRIX_3X2_F& Transform() { return m_transform; }
+	void Translate(const D2D1_POINT_2F& point);
+	void Translate(const D2D1_SIZE_F& size);
+	void Translate(const D2D1_MATRIX_3X2_F& transform);
 
 	void AddRenderer(Renderer* renderer);
 

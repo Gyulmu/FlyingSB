@@ -156,6 +156,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="GameBase.cpp" />
+    <ClCompile Include="GameInput.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameWindow.cpp" />
     <ClCompile Include="main.cpp" />
@@ -168,6 +169,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameBase.h" />
+    <ClInclude Include="GameInput.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameUI.h" />
     <ClInclude Include="GameWindow.h" />

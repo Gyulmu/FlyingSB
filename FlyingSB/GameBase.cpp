@@ -1,4 +1,5 @@
 #include "GameBase.h"	
+#include "GameInput.h"
 #include "GameWindow.h"
 #include "SceneManager.h"
 
@@ -7,12 +8,14 @@ bool GameBase::s_loop = true;
 void GameBase::Initialize(HINSTANCE instance)
 {
 	GameWindow::Initialize(instance);
+	GameInput::Initialize();
 	SceneManager::Initialize();
 }
 
 void GameBase::Release()
 {
 	SceneManager::Release();
+	GameInput::Release();
 	GameWindow::Release();
 }
 
@@ -23,6 +26,7 @@ void GameBase::Run()
 	while (s_loop)
 	{
 		GameWindow::Update();
+		GameInput::Update();
 		is_loaded = SceneManager::Update();
 
 		// Render

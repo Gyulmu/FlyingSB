@@ -7,4 +7,8 @@ namespace GameUI
 {
 	void LoadScene(Scene* scene);
 	ID2D1RenderTarget* RenderTarget();
+
+	bool KeyPress(int key);
+	bool KeyDown(int key);
+	bool KeyUp(int key);
 }

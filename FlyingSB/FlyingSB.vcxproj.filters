@@ -57,6 +57,9 @@
     <ClCompile Include="renderer_test.cpp">
       <Filter>Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="GameInput.cpp">
+      <Filter>GameBase</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameBase.h">
@@ -91,6 +94,9 @@
     </ClInclude>
     <ClInclude Include="renderer_test.h">
       <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="GameInput.h">
+      <Filter>GameBase</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
