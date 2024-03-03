@@ -10,6 +10,7 @@ public:
 
 	static void BeginDraw();
 	static void EndDraw();
+	static ID2D1RenderTarget* RenderTarget() { return s_rendertarget; }
 
 private:
 	static void RegisterWindowClass(HINSTANCE instance);

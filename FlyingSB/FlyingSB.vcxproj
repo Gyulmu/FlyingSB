@@ -156,16 +156,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="GameBase.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameWindow.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="obj_test.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="scene_init.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameBase.h" />
+    <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameUI.h" />
     <ClInclude Include="GameWindow.h" />
+    <ClInclude Include="obj_test.h" />
     <ClInclude Include="RefCount.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />

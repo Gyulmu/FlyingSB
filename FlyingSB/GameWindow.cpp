@@ -110,3 +110,11 @@ LRESULT GameWindow::WindowProc(HWND wnd, UINT message, WPARAM wparam, LPARAM lpa
 
     return 0;
 }
+
+namespace GameUI
+{
+    ID2D1RenderTarget* RenderTarget()
+    {
+        return GameWindow::RenderTarget();
+    }
+}
