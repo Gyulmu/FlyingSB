@@ -162,6 +162,7 @@
   <ItemGroup>
     <ClInclude Include="GameBase.h" />
     <ClInclude Include="GameWindow.h" />
+    <ClInclude Include="RefCount.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

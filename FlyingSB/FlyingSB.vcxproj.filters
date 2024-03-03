@@ -35,5 +35,8 @@
     <ClInclude Include="GameWindow.h">
       <Filter>GameBase</Filter>
     </ClInclude>
+    <ClInclude Include="RefCount.h">
+      <Filter>GameBase</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
