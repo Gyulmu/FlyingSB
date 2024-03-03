@@ -2,7 +2,7 @@
 #include "GameUI.h"
 
 // Renderer
-#include "renderer_test.h"
+#include "renderer_bitmaps.h"
 
 obj_test::obj_test()
 {
@@ -10,20 +10,19 @@ obj_test::obj_test()
 
 obj_test::~obj_test()
 {
-	if (m_bitmap)
-		m_bitmap->Release();
 }
 
 void obj_test::Initialize()
 {
-	renderer_test* renderer = new renderer_test(this);
-	renderer->Size(D2D1::SizeF(100.f, 50.f));
-	renderer->Color(D2D1::ColorF(D2D1::ColorF::Red));
-	AddRenderer(renderer);
-	renderer->Release();
+	// Add Renderer
+	m_renderer = new renderer_bitmaps(this);
+	AddRenderer(m_renderer);
+	m_renderer->Release();
 
-	// Get Bitmap
-	m_bitmap = GameUI::D2D1BitmapFromFileName(L"CMIRO00.png");
+	// Set Renderer
+	ID2D1Bitmap* source = GameUI::D2D1BitmapFromFileName(L"CMIRO00.png");
+	m_renderer->SetBitmaps(source, 6, 4);
+	source->Release();
 }
 
 void obj_test::Update()
@@ -39,12 +38,10 @@ void obj_test::Update()
 
 	else if (GameUI::KeyUp(VK_DOWN))
 		Translate(D2D1::SizeF(0.f, 50.f));
-}
 
-void obj_test::Render()
-{
-	GameObject::Render();
-
-	if (m_bitmap)
-		GameUI::RenderTarget()->DrawBitmap(m_bitmap);
+	for (int i = 0; i < 9; ++i)
+	{
+		if (GameUI::KeyDown('1' + i))
+			m_renderer->Frame(i);
+	}
 }

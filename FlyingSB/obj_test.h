@@ -2,6 +2,8 @@
 #include "GameObject.h"
 #include <d2d1.h>
 
+class renderer_bitmaps;
+
 class obj_test : public GameObject
 {
 public:
@@ -11,8 +13,7 @@ private:
 	virtual ~obj_test() final;
 	virtual void Initialize() final;
 	virtual void Update() final;
-	virtual void Render() final;
 
 private:
-	ID2D1Bitmap* m_bitmap = nullptr;
+	renderer_bitmaps* m_renderer = nullptr;
 };

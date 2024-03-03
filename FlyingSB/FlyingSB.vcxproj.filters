@@ -63,6 +63,9 @@
     <ClCompile Include="GameWIC.cpp">
       <Filter>GameBase</Filter>
     </ClCompile>
+    <ClCompile Include="renderer_bitmaps.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameBase.h">
@@ -103,6 +106,9 @@
     </ClInclude>
     <ClInclude Include="GameWIC.h">
       <Filter>GameBase</Filter>
+    </ClInclude>
+    <ClInclude Include="renderer_bitmaps.h">
+      <Filter>Renderer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
