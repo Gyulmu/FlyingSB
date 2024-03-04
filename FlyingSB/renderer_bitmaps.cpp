@@ -16,9 +16,8 @@ renderer_bitmaps::~renderer_bitmaps()
 	}
 }
 
-void renderer_bitmaps::Render(const D2D1_MATRIX_3X2_F& transform)
+void renderer_bitmaps::RenderImpl()
 {
-	RenderTarget()->SetTransform(transform);
 	RenderTarget()->DrawBitmap(m_bitmap[m_frame]);
 }
 

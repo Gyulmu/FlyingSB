@@ -14,7 +14,7 @@ public:
 	void Render();
 
 private:
-	virtual void Render(const D2D1_MATRIX_3X2_F& transform) = 0;
+	virtual void RenderImpl() = 0;
 
 protected:
 	GameObject* Target() { return m_target; }

@@ -11,7 +11,7 @@ public:
 
 private:
 	virtual ~renderer_bitmaps() final;
-	virtual void Render(const D2D1_MATRIX_3X2_F& transform) final;
+	virtual void RenderImpl() final;
 
 public:
 	void SetBitmaps(ID2D1Bitmap* source, int div_x, int div_y);

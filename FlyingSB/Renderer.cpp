@@ -10,5 +10,6 @@ Renderer::Renderer(GameObject* target) :
 
 void Renderer::Render()
 {
-	Render(m_target->Transform());
+	m_rendertarget->SetTransform(m_target->Transform());
+	RenderImpl();
 }
