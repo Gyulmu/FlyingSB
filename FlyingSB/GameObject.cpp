@@ -58,7 +58,7 @@ void GameObject::Translate(const D2D1_MATRIX_3X2_F& transform)
 	m_transform.m22 += transform.m22;
 }
 
-void GameObject::AddRenderer(Renderer* renderer)
+void GameObject::SetRenderer(Renderer* renderer)
 {
 	if (m_renderer)
 		m_renderer->Release();

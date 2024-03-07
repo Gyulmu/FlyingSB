@@ -22,7 +22,7 @@ public:
 	void Translate(const D2D1_SIZE_F& size);
 	void Translate(const D2D1_MATRIX_3X2_F& transform);
 
-	void AddRenderer(Renderer* renderer);
+	void SetRenderer(Renderer* renderer);
 
 private:
 	D2D1_MATRIX_3X2_F m_transform = D2D1::Matrix3x2F::Identity();
