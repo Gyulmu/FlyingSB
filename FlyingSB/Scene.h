@@ -15,17 +15,11 @@ public:
 	void Update();
 	void Render();
 
+protected: 
+	
+	// List에 추가될 때 GameObject::Initialize 함수가 호출됩니다.
+	void AddGameObjectToList(GameObject* object);
+
 private:
 	std::list<GameObject*> m_object;
-
-protected:
-	template<typename T>
-	T* Create()
-	{
-		T* object = new T;
-		object->AddRef();
-		((GameObject*)object)->Initialize();
-		m_object.emplace_back(object);
-		return object;
-	}
 };

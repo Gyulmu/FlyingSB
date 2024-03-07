@@ -33,3 +33,10 @@ void Scene::Render()
 		(*iter)->Render();
 	}
 }
+
+void Scene::AddGameObjectToList(GameObject* object)
+{
+	object->AddRef();
+	object->Initialize();
+	m_object.emplace_back(object);
+}

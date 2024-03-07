@@ -13,6 +13,7 @@ scene_init::~scene_init()
 
 void scene_init::Initialize()
 {
-	GameObject* object = Create<obj_test>();
-	object->Release();
+	obj_test* test_object = new obj_test;
+	AddGameObjectToList(test_object);
+	test_object->Release();
 }
