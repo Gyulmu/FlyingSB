@@ -27,21 +27,17 @@ void GameBase::Release()
 
 void GameBase::Run()
 {
-	bool is_loaded = false;
-
 	while (s_loop)
 	{
 		GameWindow::Update();
 		GameInput::Update();
 		GameTimer::Update();
-		is_loaded = SceneManager::Update();
+
+		if (SceneManager::Update())
+			continue;
 
 		// Render
 		Render();
-
-		// Load Scene
-		if (is_loaded)
-			SceneManager::LoadScene();
 	}
 }
 

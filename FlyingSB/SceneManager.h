@@ -10,8 +10,10 @@ public:
 	static bool Update();
 	static void Render();
 
-	static void LoadScene();
 	static void LoadScene(Scene* scene);
+
+private:
+	static bool LoadScene();
 
 private:
 	static Scene* s_scene;
