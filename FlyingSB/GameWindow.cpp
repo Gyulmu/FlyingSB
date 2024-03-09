@@ -1,5 +1,6 @@
 #include "GameWindow.h"
 #include "GameBase.h"
+#include "GameInput.h"
 
 HWND GameWindow::s_wnd = nullptr;
 ID2D1HwndRenderTarget* GameWindow::s_rendertarget = nullptr;
@@ -100,6 +101,11 @@ LRESULT GameWindow::WindowProc(HWND wnd, UINT message, WPARAM wparam, LPARAM lpa
 {
     switch (message)
     {
+    case WM_ACTIVATE:
+        GameInput::Activate(
+            !(LOWORD(wparam) == WA_INACTIVE));
+        break;
+
     case WM_CLOSE:
         GameBase::Exit();
         break;

@@ -2,6 +2,7 @@
 #include <Windows.h>
 
 std::vector<GameInput::KeyState*> GameInput::s_input;
+void(*GameInput::s_update)() = GameInput::UpdateDefault;
 
 struct GameInput::KeyState
 {
@@ -25,6 +26,35 @@ void GameInput::Release()
 }
 
 void GameInput::Update()
+{
+    s_update();
+}
+
+bool GameInput::Press(int key)
+{
+    return s_input[key]->press;
+}
+
+bool GameInput::Down(int key)
+{
+    return s_input[key]->down;
+}
+
+bool GameInput::Up(int key)
+{
+    return s_input[key]->up;
+}
+
+void GameInput::Activate(bool activate)
+{
+    if (activate)
+        s_update = UpdateDefault;
+
+    else
+        s_update = UpdateInactivate;
+}
+
+void GameInput::UpdateDefault()
 {
     for (int i = 0; i < 256; ++i)
     {
@@ -52,19 +82,8 @@ void GameInput::Update()
     }
 }
 
-bool GameInput::Press(int key)
+void GameInput::UpdateInactivate()
 {
-    return s_input[key]->press;
-}
-
-bool GameInput::Down(int key)
-{
-    return s_input[key]->down;
-}
-
-bool GameInput::Up(int key)
-{
-    return s_input[key]->up;
 }
 
 namespace GameUI
