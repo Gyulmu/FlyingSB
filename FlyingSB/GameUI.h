@@ -14,4 +14,5 @@ namespace GameUI
 	bool KeyUp(int key);
 
 	float Duration();
+	void Exit();
 }

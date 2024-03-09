@@ -53,3 +53,11 @@ void GameBase::Render()
 	// End Draw
 	GameWindow::EndDraw();
 }
+
+namespace GameUI
+{
+	void Exit()
+	{
+		GameBase::Exit();
+	}
+}
