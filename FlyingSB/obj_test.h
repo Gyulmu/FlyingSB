@@ -2,7 +2,8 @@
 #include "GameObject.h"
 #include <d2d1.h>
 
-class renderer_bitmaps;
+class renderer_bitmap;
+class Animator;
 
 class obj_test : public GameObject
 {
@@ -15,7 +16,9 @@ private:
 	virtual void Update() final;
 
 private:
-	renderer_bitmaps* m_renderer = nullptr;
+	renderer_bitmap* m_renderer = nullptr;
 	float m_time = 0.f;
 	bool m_switch = false;
+
+	Animator* m_animator = nullptr;
 };

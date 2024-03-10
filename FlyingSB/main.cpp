@@ -1,4 +1,5 @@
 #include "GameBase.h"
+#include "GameData.h"
 #include "GameUI.h"
 #include <crtdbg.h>
 
@@ -11,6 +12,7 @@ int WINAPI WinMain(
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
 	GameBase::Initialize(instance);
+	GameData::Initialize();
 
 	// Load Scene
 	Scene* scene = new scene_init;
@@ -19,6 +21,9 @@ int WINAPI WinMain(
 
 	// Game Run
 	GameBase::Run();
+
+	// Release
+	GameData::Release();
 	GameBase::Release();
 
 	return 0;

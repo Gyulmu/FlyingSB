@@ -155,7 +155,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="AnimationData.cpp" />
+    <ClCompile Include="Animator.cpp" />
+    <ClCompile Include="BitmapData.cpp" />
     <ClCompile Include="GameBase.cpp" />
+    <ClCompile Include="GameData.cpp" />
     <ClCompile Include="GameInput.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameTimer.cpp" />
@@ -164,6 +169,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="obj_test.cpp" />
     <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="renderer_bitmap.cpp" />
     <ClCompile Include="renderer_bitmaps.cpp" />
     <ClCompile Include="renderer_test.cpp" />
     <ClCompile Include="Scene.cpp" />
@@ -171,7 +177,14 @@
     <ClCompile Include="scene_init.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="AnimationData.h" />
+    <ClInclude Include="AnimationFrame.h" />
+    <ClInclude Include="Animator.h" />
+    <ClInclude Include="BitmapData.h" />
+    <ClInclude Include="DataUI.h" />
     <ClInclude Include="GameBase.h" />
+    <ClInclude Include="GameData.h" />
     <ClInclude Include="GameInput.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameTimer.h" />
@@ -181,6 +194,7 @@
     <ClInclude Include="obj_test.h" />
     <ClInclude Include="RefCount.h" />
     <ClInclude Include="Renderer.h" />
+    <ClInclude Include="renderer_bitmap.h" />
     <ClInclude Include="renderer_bitmaps.h" />
     <ClInclude Include="renderer_test.h" />
     <ClInclude Include="Scene.h" />

@@ -25,6 +25,12 @@
     <Filter Include="Renderer">
       <UniqueIdentifier>{d552b7de-33d1-47f8-8763-c5ef419996dc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Animation">
+      <UniqueIdentifier>{dac848c6-a51a-4f0f-ab04-644b7e9352c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameData">
+      <UniqueIdentifier>{d49c81e3-622b-4f4a-90d9-13ca5e007786}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -68,6 +74,24 @@
     </ClCompile>
     <ClCompile Include="GameTimer.cpp">
       <Filter>GameBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Animator.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="GameData.cpp">
+      <Filter>GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationData.cpp">
+      <Filter>GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="BitmapData.cpp">
+      <Filter>GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="renderer_bitmap.cpp">
+      <Filter>Renderer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +139,30 @@
     </ClInclude>
     <ClInclude Include="GameTimer.h">
       <Filter>GameBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Animator.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationFrame.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="GameData.h">
+      <Filter>GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationData.h">
+      <Filter>GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="BitmapData.h">
+      <Filter>GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="DataUI.h">
+      <Filter>GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="renderer_bitmap.h">
+      <Filter>Renderer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

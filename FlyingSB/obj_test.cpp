@@ -1,8 +1,10 @@
 #include "obj_test.h"
 #include "GameUI.h"
+#include "DataUI.h"
 
 // Renderer
-#include "renderer_bitmaps.h"
+#include "renderer_bitmap.h"
+#include "Animator.h"
 
 obj_test::obj_test()
 {
@@ -10,19 +12,22 @@ obj_test::obj_test()
 
 obj_test::~obj_test()
 {
+	if (m_animator)
+		m_animator->Release();
 }
 
 void obj_test::Initialize()
 {
 	// Add Renderer
-	m_renderer = new renderer_bitmaps(this);
-	AddRenderer(m_renderer);
+	m_renderer = new renderer_bitmap(this);
+	SetRenderer(m_renderer);
 	m_renderer->Release();
 
-	// Set Renderer
-	ID2D1Bitmap* source = GameUI::D2D1BitmapFromFileName(L"CMIRO00.png");
-	m_renderer->SetBitmaps(source, 6, 4);
-	source->Release();
+	// Animator
+	m_animator = new Animator(m_renderer);
+	m_animator->SetAnimation(DataUI::GetAnimation());
+	m_animator->SetPlayType(Animator::PlayType::Repeat);
+	m_animator->Play();
 }
 
 void obj_test::Update()
@@ -39,18 +44,9 @@ void obj_test::Update()
 	else if (GameUI::KeyUp(VK_DOWN))
 		Translate(D2D1::SizeF(0.f, 50.f));
 
-	for (int i = 0; i < 9; ++i)
-	{
-		if (GameUI::KeyDown('1' + i))
-			m_renderer->Frame(i);
-	}
+	m_animator->Update();
+	m_renderer->SetBitmap(m_animator->GetBitmapFromFrame());
 
-	m_time += GameUI::Duration();
-
-	if (m_time > 1.f)
-	{
-		m_time -= 1.f;
-		m_switch = !m_switch;
-		m_renderer->Frame(6 * (int)m_switch);
-	}
+	if (GameUI::KeyDown(VK_ESCAPE))
+		GameUI::Exit();
 }
